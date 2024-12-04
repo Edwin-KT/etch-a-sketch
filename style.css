@@ -8,15 +8,19 @@ body {
 
 .title {
   font-size: 4rem;
+  font-weight: bolder;
+  color: #2d3142;
 }
 
 .canvas-container {
   display: flex;
   flex-direction: column;
   border-width: 10px;
-  border-color: black;
+  border-color: #212529;
   border-style: solid;
   user-select: none;
+  width: 768px;
+  height: 768px;
 }
 
 .canvas-line {
