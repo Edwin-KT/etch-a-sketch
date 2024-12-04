@@ -8,6 +8,7 @@ const size64Button = document.querySelector(".size64-button");
 let canvasSize = 16;
 
 clearButton.addEventListener("click", () => createCanvas(canvasSize));
+
 size16Button.addEventListener("click", () => {
   removeSelection(canvasSize);
   canvasSize = 16;
