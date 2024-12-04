@@ -1,11 +1,22 @@
 .canvas-containter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-width: 8px;
   border-color: black;
   border-radius: 4px;
   border-style: solid;
 }
 
+.canvas-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .square {
-  width: 2px;
-  height: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: orange;
 }
