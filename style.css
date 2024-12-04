@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Cabin Sketch", sans-serif;
 }
 
 .canvas-container {
