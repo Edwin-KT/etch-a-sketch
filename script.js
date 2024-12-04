@@ -1,3 +1,5 @@
+const DARK_COLOR = "#212529";
+
 const canvas = document.querySelector(".canvas-container");
 const clearButton = document.querySelector(".clear-button");
 const size16Button = document.querySelector(".size16-button");
@@ -7,17 +9,23 @@ let canvasSize = 16;
 
 clearButton.addEventListener("click", () => createCanvas(canvasSize));
 size16Button.addEventListener("click", () => {
+  removeSelection(canvasSize);
   canvasSize = 16;
+  selectButton(canvasSize);
   createCanvas(canvasSize);
 });
 
 size32Button.addEventListener("click", () => {
+  removeSelection(canvasSize);
   canvasSize = 32;
+  selectButton(canvasSize);
   createCanvas(canvasSize);
 });
 
 size64Button.addEventListener("click", () => {
+  removeSelection(canvasSize);
   canvasSize = 64;
+  selectButton(canvasSize);
   createCanvas(canvasSize);
 });
 
@@ -54,6 +62,18 @@ function createCanvas(size) {
     }
     canvas.appendChild(line);
   }
+}
+
+function removeSelection(size) {
+  if (size === 16) size16Button.classList.remove("button-selected");
+  else if (size === 32) size32Button.classList.remove("button-selected");
+  else if (size === 64) size64Button.classList.remove("button-selected");
+}
+
+function selectButton(size) {
+  if (size === 16) size16Button.classList.add("button-selected");
+  else if (size === 32) size32Button.classList.add("button-selected");
+  else if (size === 64) size64Button.classList.add("button-selected");
 }
 
 // canvas functions end

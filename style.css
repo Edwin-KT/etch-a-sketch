@@ -31,8 +31,16 @@ body {
 button {
   font-size: 2rem;
   font-family: "Cabin Sketch", sans-serif;
+  border-color: #212529;
+  transition: all;
+  transition-duration: 0.3s;
+}
+
+.button-selected {
   background-color: #212529;
   color: white;
+  transition-duration: 0.3s;
+  transition: all;
 }
 
 .canvas {
@@ -60,4 +68,13 @@ button {
   font-size: 1.2rem;
   margin: 0;
   font-weight: bolder;
+}
+
+.clear-button:hover {
+  background-color: #212529;
+  color: white;
+}
+
+.clear-button:active {
+  background-color: #212529b7;
 }
