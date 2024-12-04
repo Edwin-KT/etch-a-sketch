@@ -6,16 +6,24 @@ document.addEventListener("mousedown", (event) => {
 });
 document.addEventListener("mouseup", () => (isDrawing = false));
 
-function createCanvas() {
+function createCanvas(canvasSize) {
   const canvas = document.querySelector(".canvas-container");
-  for (let i = 0; i < 128; i++) {
+  for (let i = 0; i < canvasSize; i++) {
     const line = document.createElement("div");
     line.classList.add("canvas-line");
-    for (let j = 0; j < 128; j++) {
+    for (let j = 0; j < canvasSize; j++) {
       const square = document.createElement("div");
       square.classList.add("square");
+      let squareSide = 768 / canvasSize;
+      console.log(squareSide);
+
+      square.style.width = `${squareSide}px`;
+      square.style.height = `${squareSide}px`;
+      square.addEventListener("mousedown", () => {
+        square.style.backgroundColor = "black";
+      });
       square.addEventListener("mouseover", () => {
-        if (isDrawing) square.style.backgroundColor = "blue";
+        if (isDrawing) square.style.backgroundColor = "black";
       });
 
       line.appendChild(square);
@@ -24,4 +32,4 @@ function createCanvas() {
   }
 }
 
-createCanvas();
+createCanvas(59);
