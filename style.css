@@ -10,6 +10,7 @@ body {
   border-width: 10px;
   border-color: black;
   border-style: solid;
+  user-select: none;
 }
 
 .canvas-line {
