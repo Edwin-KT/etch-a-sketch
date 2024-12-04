@@ -1,0 +1,11 @@
+.canvas-containter {
+  border-width: 8px;
+  border-color: black;
+  border-radius: 4px;
+  border-style: solid;
+}
+
+.square {
+  width: 2px;
+  height: 2px;
+}
