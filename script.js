@@ -44,10 +44,10 @@ function createCanvas(size) {
       square.style.width = `${squareSide}px`;
       square.style.height = `${squareSide}px`;
       square.addEventListener("mousedown", () => {
-        square.style.backgroundColor = "black";
+        square.style.backgroundColor = `${currentColor}`;
       });
       square.addEventListener("mouseover", () => {
-        if (isDrawing) square.style.backgroundColor = "black";
+        if (isDrawing) square.style.backgroundColor = `${currentColor}`;
       });
 
       line.appendChild(square);
@@ -59,3 +59,11 @@ function createCanvas(size) {
 // canvas functions end
 
 createCanvas(canvasSize);
+
+// color picker start
+let currentColor = document.getElementById("color-picker").value;
+
+document.getElementById("color-picker").onchange = function () {
+  currentColor = this.value;
+};
+// color picker end
